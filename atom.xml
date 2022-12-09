@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-10-30T17:44:18.363Z</updated>
+  <updated>2022-12-09T17:24:24.582Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>刷题</title>
+    <link href="http://example.com/2022/12/10/%E5%88%B7%E9%A2%98/"/>
+    <id>http://example.com/2022/12/10/%E5%88%B7%E9%A2%98/</id>
+    <published>2022-12-10T10:27:53.000Z</published>
+    <updated>2022-12-09T17:24:24.582Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="D:\text\BlogGit\image\1.jpg"></p><p><img src="D:\text\BlogGit\image\1.1.png"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace  std;</span><br><span class="line"><span class="built_in">int</span> <span class="type">List</span>[<span class="number">1005</span>][<span class="number">1005</span>];</span><br><span class="line"><span class="built_in">int</span> w[<span class="number">1005</span>];//价值</span><br><span class="line"><span class="built_in">int</span> v[<span class="number">1005</span>];//体积</span><br><span class="line"><span class="built_in">int</span> main() &#123;</span><br><span class="line">    <span class="built_in">int</span> N,V;</span><br><span class="line">    cin&gt;&gt;N&gt;&gt;V;</span><br><span class="line">    w[<span class="number">0</span>]=v[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;N+<span class="number">1</span>;i++)&#123;</span><br><span class="line">        cin&gt;&gt;v[i]&gt;&gt;w[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">0</span>;i&lt;N+<span class="number">1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> j=<span class="number">0</span>;j&lt;V+<span class="number">1</span>;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i==<span class="number">0</span> <span class="keyword">or</span> j==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="type">List</span>[i][j]=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(v[i]&gt;j)&#123;</span><br><span class="line">                <span class="type">List</span>[i][j]=<span class="type">List</span>[i-<span class="number">1</span>][j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="type">List</span>[i][j]=<span class="built_in">max</span>(<span class="type">List</span>[i-<span class="number">1</span>][j],<span class="type">List</span>[i-<span class="number">1</span>][j-v[i]]+w[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="type">List</span>[N][V];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="D:\text\BlogGit\image\1.2.png"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> N,V;</span><br><span class="line"><span class="built_in">int</span> v[<span class="number">1010</span>],val[<span class="number">1010</span>];</span><br><span class="line"><span class="built_in">int</span> dp[<span class="number">1010</span>][<span class="number">1010</span>];</span><br><span class="line"><span class="built_in">int</span> main()</span><br><span class="line">&#123;</span><br><span class="line">    scanf(<span class="string">&quot;%d%d&quot;</span>,&amp;N,&amp;V);</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>; i&lt;=N; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(<span class="string">&quot;%d%d&quot;</span>,&amp;v[i],&amp;val[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>; i&lt;=N; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">int</span> j=<span class="number">0</span>; j&lt;=V; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp[i][j]=dp[i-<span class="number">1</span>][j];//继承上一个背包</span><br><span class="line">            <span class="keyword">if</span>(j&gt;=v[i])</span><br><span class="line">            &#123;  //完全背包状态转移方程</span><br><span class="line">                dp[i][j]=<span class="built_in">max</span>(dp[i-<span class="number">1</span>][j],dp[i][j-v[i]]+val[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    printf(<span class="string">&quot;%d&quot;</span>,dp[N][V]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="D:\text\BlogGit\image\1.3.png"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include &lt;cstring&gt;</span></span><br><span class="line"></span><br><span class="line">using namespace  std;</span><br><span class="line"><span class="built_in">int</span> <span class="type">List</span>[<span class="number">1005</span>][<span class="number">1005</span>];</span><br><span class="line"><span class="built_in">int</span> w[<span class="number">1005</span>];//价值</span><br><span class="line"><span class="built_in">int</span> v[<span class="number">1005</span>];//体积</span><br><span class="line"><span class="built_in">int</span> s[<span class="number">1005</span>];//件数</span><br><span class="line"><span class="built_in">int</span> N,V;</span><br><span class="line"><span class="built_in">int</span> k;</span><br><span class="line"><span class="built_in">int</span> main() &#123;</span><br><span class="line">    cin&gt;&gt;N&gt;&gt;V;</span><br><span class="line">    w[<span class="number">0</span>]=v[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;N+<span class="number">1</span>;i++)&#123;</span><br><span class="line">        scanf(<span class="string">&quot;%d%d%d&quot;</span>,&amp;v[i],&amp;w[i],&amp;s[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    memset(<span class="type">List</span>,<span class="number">0</span>,sizeof(<span class="type">List</span>));</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">int</span> i=<span class="number">1</span>;i&lt;N+<span class="number">1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> j=<span class="number">0</span>;j&lt;V+<span class="number">1</span>;j++)&#123;</span><br><span class="line">            k=<span class="built_in">min</span>(s[i],j/v[i]);</span><br><span class="line">            <span class="keyword">for</span>(<span class="built_in">int</span> t=<span class="number">0</span>;t&lt;=k;t++)&#123;</span><br><span class="line">                <span class="type">List</span>[i][j]= <span class="built_in">max</span>(<span class="type">List</span>[i][j],<span class="type">List</span>[i-<span class="number">1</span>][j-t*v[i]]+t*w[i]);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;<span class="type">List</span>[N][V];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;D:\text\BlogGit\image\1.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;D:\text\BlogGit\image\1.1.png&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;</summary>
+      
+    
+    
+    
+    <category term="算法刷题" scheme="http://example.com/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="背包问题" scheme="http://example.com/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何搭建一个神经元</title>
+    <link href="http://example.com/2022/11/15/CNN%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E5%AD%A6%E4%B9%A01/"/>
+    <id>http://example.com/2022/11/15/CNN%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E5%AD%A6%E4%B9%A01/</id>
+    <published>2022-11-14T16:00:00.000Z</published>
+    <updated>2022-11-25T03:44:41.884Z</updated>
+    
+    <content type="html"><![CDATA[<h3><font face='楷体'>实现方法</font></h3><h5><font face='楷体'>神经元（Neurons）:它是神经网络的基本单元。神经元先获得输入，然后执行某些数学运算后，再产生一个输出。比如一个2输入神经元的例子：</font></h5><p><img src="https://picx.zhimg.com/80/v2-5550feac69724dcbc145574525ae42f6_720w.webp?source=1940ef5c"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3&gt;&lt;font face=&#39;楷体&#39;&gt;实现方法&lt;/font&gt;&lt;/h3&gt;
+
+&lt;h5&gt;&lt;font face=&#39;楷体&#39;&gt;神经元（Neurons）:它是神经网络的基本单元。神经元先获得输入，然后执行某些数学运算后，再产生一个输出。比如一个2输入神经元的例子：&lt;/font&gt;&lt;/h5&gt;
+
+</summary>
+      
+    
+    
+    
+    <category term="机器学习" scheme="http://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="机器学习" scheme="http://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="CNN" scheme="http://example.com/tags/CNN/"/>
+    
+  </entry>
   
   <entry>
     <title>实验二：词频统计与可视化</title>
